@@ -1,52 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
-
-    <!-- Bootstrap CSS -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Add Todos</title>
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
       integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
       crossorigin="anonymous"
     />
-    <style>
-      li {
-        list-style: none;
-      }
-    </style>
+   <style>
+     .container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+}
 
-    <title>Exercise Rabu 2</title>
+.input-group {
+  box-sizing: border-box;
+  padding: 40px;
+}
+#inputTodo {
+  margin: 0 10px 0 10px;
+}
+
+.display-todo {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: space-between;
+  box-sizing: border-box;
+  padding: 0 20px;
+}
+
+.display-todo div {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 2px 0;
+}
+
+button {
+  margin: 0 1px;
+}
+
+   </style>
   </head>
   <body>
     <div class="container">
-      <div class="row mt-5">
-        <div class="col">
-          <div class="form-group">
-            <input
-              type="email"
-              class="form-control"
-              id="myInput"
-              placeholder="Add Todo"
-            />
-          </div>
-        </div>
-        <div class="col">
-          <button id="add" type="button" class="btn btn-primary">
+      <div class="add-todo">
+        <div class="input-group mt-4">
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Add Todo"
+            id="inputTodo"
+          />
+          <button type="button" class="btn btn-primary" id="add-button">
             Add
           </button>
         </div>
       </div>
-    </div>
-    <div class="container-dua">
-      <ul id="myUL"></ul>
+      <div class="display-todo">
+      </div>
     </div>
 
-    <script src="script.js"></script>
+    <script src="script.js""></script>
   </body>
 </html>
